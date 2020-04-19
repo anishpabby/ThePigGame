@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="gamer">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 id="game">The Pig Game</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="wrapper clearfix">
+        <div id="player0-panel" class="{{p1}}">
+          <h3 class="pname">
+            {{player1}}
+          </h3>
+          <p>{{p1score}}</p>
+          <div class="current-box">
+            <div class="current-label">Current</div>
+            <div class="current0">
+              {{current1}}
+            </div>
+          </div>
+        </div>
+        <div id="player1-panel" class="{{p2}}">
+          <h3 class="pname">
+            {{player2}}
+          </h3>
+          <p>{{p2score}}</p>
+          <div class="current-box">
+            <div class="current-label">Current</div>
+            <div class="current1">
+              {{current2}}
+            </div>
+          </div>
+        </div>
+        <button class="btn-new" (click) = "reset()"><i class="material-icons">open_in_new</i>New Game</button>
+        <button class="btn-roll" (click)="roll()" [disabled] = "!gameMode"><i class="material-icons">loop</i>Roll dice</button>
+        <button class="btn-hold" (click) = "hold()" [disabled] = "!gameMode"><i class="glyphicon glyphicon-circle-arrow-down"></i>Hold</button>
+        <img src="{{dice}}" class="dice" id="dice-1" *ngIf = "newGame">
+      </div>
+    </div>
+  </div>
+  </div>
+  <button class="btn btn-primary" id="rules" type="submit" (click)= "rules()">Game Rules</button>
