@@ -1,6 +1,7 @@
 # PigGame
 
 Play the game at https://anishpabby.github.io/pig-game/
+Works better in landscape mode.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
